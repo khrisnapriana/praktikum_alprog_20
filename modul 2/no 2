@@ -18,18 +18,19 @@ float validasiInput(float *var)
 }
 int main(){
 
-    float nt,uts,uas,na;
+    float nab,nt,uts,nq,uas,na;
     char indeks;
     char pilih[100];
     printf ("\nKelompok 20\n");
     angkaPertama:
-    printf("\nMasukan nilai Tugas = ");
+    printf("\nMasukan nilai Absen = ");
     fflush(stdin);
-    if (validasiInput(&nt)) {
-        if (nt<0 || nt>100) {
+    if (validasiInput(&nab)) {
+        if (nab<0 || nab>15) {
         printf("Input Salah!");
         getch();system("cls");
-        printf ("\nKelompok 20\n"); goto angkaPertama;
+        printf ("\nKelompok 20\n");
+        goto angkaPertama;
     }
     }
     else {
@@ -39,15 +40,59 @@ int main(){
         printf ("\nKelompok 20\n");
         goto angkaPertama;
     }
+
     angkaKedua:
-    printf("Masukan nilai UTS   = ");
-        if (validasiInput(&uts)) {if (uts<0 || uts>100)
-        {
+    printf ("Masukan nilai Tugas = ");
+    if (validasiInput(&nt)) {
+        if (nt<0 || nt>100) {
         printf("Input Salah!");
         getch();system("cls");
         printf ("\nKelompok 20\n");
-        printf("\nMasukan nilai Tugas = %.0f\n", nt);
+        printf("\nMasukan nilai Absen = %.0f\n", nab);
         goto angkaKedua;
+    }
+    }
+    else {
+        printf("Input Salah!");
+        getch();
+        system("cls");
+        printf ("\nKelompok 20\n");
+        printf("\nMasukan nilai Absen = %.0f\n", nab);
+        goto angkaKedua;
+    }
+
+    angkaKetiga:
+    printf("Masukan nilai QUIZ  = ");
+    if (validasiInput(&nq)) {
+        if (nq<0 || nq >100) {
+        system("cls");
+        printf ("\nKelompok 20\n");
+        printf("Masukan nilai Absen =  %.0f\n", nab);
+        printf("\nMasukan nilai Tugas = %.0f\n", nt);
+        goto angkaKetiga;
+    }
+    }
+    else {
+        printf("Input Salah!");
+        getch();
+        system("cls");
+        printf("Kelompok 20\n");
+        printf("Masukan nilai Absen =  %.0f\n", nab);
+        printf("Masukan nilai Tugas = %.0f\n", nt);
+        goto angkaKetiga;
+    }
+
+    angkaKeempat:
+    printf("Masukan nilai UTS   = ");
+    if (validasiInput(&uts)) {
+        if (uts<0 || uts>100){
+        printf("Input Salah!");
+        getch();system("cls");
+        printf ("\nKelompok 20\n");
+        printf("\nMasukan nilai Absen = %.0f\n", nab);
+        printf("\nMasukan nilai Tugas = %.0f\n", nt);
+        printf("\nMasukan nilai QUIZ= %.0f\n", nq);
+        goto angkaKeempat;
         }
         }
         else {
@@ -55,18 +100,22 @@ int main(){
         getch();
         system("cls");
         printf ("\nKelompok 20\n");
+        printf("\nMasukan nilai Absen = %.0f\n", nab);
         printf("\nMasukan nilai Tugas = %.0f\n", nt);
-        goto angkaKedua;
+        printf("\nMasukan nilai QUIZ= %.0f\n", nq);
+        goto angkaKeempat;
     }
-
-    angkaKetiga:
+    angkaKelima:
     printf("Masukan nilai UAS   = ");
-        if (validasiInput(&uas)) {if (uas<0 || uas >100) {
+    if (validasiInput(&uas)) {
+        if (uas<0 || uas >100) {
         system("cls");
         printf ("\nKelompok 20\n");
+        printf("\nMasukan nilai Absen = %.0f\n", nab);
         printf("\nMasukan nilai Tugas = %.0f\n", nt);
+        printf("\nMasukan nilai QUIZ= %.0f\n", nq);
         printf("\nMasukan nilai UTS   = %.0f\n", uts);
-        goto angkaKetiga;
+        goto angkaKelima;
         }
     }
     else {
@@ -74,26 +123,46 @@ int main(){
         getch();
         system("cls");
         printf ("Kelompok 20\n");
-        printf("Masukan nilai Tugas = %.0f\n", nt);
+        printf("\nMasukan nilai Absen = %.0f\n", nab);
+        printf("\nMasukan nilai Tugas = %.0f\n", nt);
+        printf("\nMasukan nilai QUIZ= %.0f\n", nq);
         printf("Masukan nilai UTS   = %.0f\n", uts);
-        goto angkaKetiga;
+        goto angkaKelima;
     }
-    na=(nt*0.25)+(uts*0.25)+(uas*0.5);
+
+    na=(nab*0.5)+(nt*0.20)+(nq*0.15)+(uts*0.30)+(uas*0.30);
     if(na>=0 && na<45 ){
-        indeks='E'; }
+        printf ("\nNilai Akhir = %.2f %c",na);
+        printf("\nIndeks Nilai Anda adalah E");
+    }
+    else if(na<50 ){
+        printf ("\nNilai Akhir = %.2f %c",na);
+        printf("\nIndeks Nilai Anda adalah D");
+    }
     else if(na<55 ){
-        indeks='D';
+        printf ("\nNilai Akhir = %.2f %c",na);
+        printf("\nIndeks Nilai Anda adalah D+");
+    }
+    else if(na<60 ){
+        printf ("\nNilai Akhir = %.2f %c",na);
+        printf("\nIndeks Nilai Anda adalah C");
     }
     else if(na<65 ){
-        indeks='C';
+       printf ("\nNilai Akhir = %.2f %c",na);
+        printf("\nIndeks Nilai Anda adalah C+");
     }
-    else if(na<85 ){
-        indeks='B';
+    else if(na<75 ){
+        printf ("\nNilai Akhir = %.2f %c",na);
+        printf("\nIndeks Nilai Anda adalah B");
+    }
+    else if(na<80 ){
+        printf ("\nNilai Akhir = %.2f %c",na);
+        printf("\nIndeks Nilai Anda adalah B+");
     }
     else if(na<=100 ){
-        indeks='A';
+        printf ("\nNilai Akhir = %.2f %c",na);
+        printf("\nIndeks Nilai Anda adalah A");
     }
-    printf ("\nNilai Akhir = %.2f \nIndeks Nilai Anda adalah %c",na,indeks);
     keluar:
     fflush(stdin);
     printf ("\n\nIngin kembali ke Menu Utama? (Y/N)");
