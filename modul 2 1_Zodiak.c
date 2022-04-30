@@ -41,7 +41,7 @@ int main(){
 	else if (strcmpi(bulan,"desember")==0){
 		bln=12;maks=31;}
 	else{
-		printf("pilihan salah!");
+		printf("pilihan yang Anda masukan salah!");
 		getch();
 		system("cls");
 		main();
@@ -109,6 +109,5 @@ int main(){
 	getch();
 	}
 	else
-	goto keluar;
+    exit(0);
 }
-
