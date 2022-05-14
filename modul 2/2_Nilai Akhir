@@ -21,74 +21,130 @@ int main(){
     float nab,nt,uts,nq,uas,na;
     char indeks;
     char pilih[100];
-    printf ("\nKelompok 20\n");
+    system("color 90");
+    printf("\n\n\n\n\n\n\n");
+	printf("\t\t\t\t==================================================\n");
+	printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+	printf("\t\t\t\t==================================================\n");
+	printf("\t\t\t\t|            This Program Created By :           |\n");
+	printf("\t\t\t\t|                  Kelompok 20                   |\n");
+	printf("\t\t\t\t==================================================\n");
     angkaPertama:
-    printf("\nMasukan nilai Absen = ");
+    printf("\n\t\t\t\t\tMasukan nilai Absen = ");
     fflush(stdin);
     if (validasiInput(&nab)) {
         if (nab<0 || nab>15) {
-        printf("Input Salah!");
+        printf("\t\t\t\t\tInput Salah!");
         getch();system("cls");
-        printf ("\nKelompok 20\n");
+        system("color 90");
+        printf("\n\n\n\n\n\n\n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|            This Program Created By :           |\n");
+        printf("\t\t\t\t|                  Kelompok 20                   |\n");
+        printf("\t\t\t\t==================================================\n");
         goto angkaPertama;
     }
     }
     else {
-        printf("Input Salah!");
+        printf("\t\t\t\t\tInput Salah!");
         getch();
         system("cls");
-        printf ("\nKelompok 20\n");
+        system("color 90");
+        printf("\n\n\n\n\n\n\n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|            This Program Created By :           |\n");
+        printf("\t\t\t\t|                  Kelompok 20                   |\n");
+        printf("\t\t\t\t==================================================\n");
         goto angkaPertama;
     }
 
     angkaKedua:
-    printf ("Masukan nilai Tugas = ");
+    printf ("\t\t\t\t\tMasukan nilai Tugas = ");
     if (validasiInput(&nt)) {
         if (nt<0 || nt>100) {
-        printf("Input Salah!");
+        printf("\t\t\t\t\tInput Salah!");
         getch();system("cls");
-        printf ("\nKelompok 20\n");
+        system("color 90");
+        printf("\n\n\n\n\n\n\n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|            This Program Created By :           |\n");
+        printf("\t\t\t\t|                  Kelompok 20                   |\n");
+        printf("\t\t\t\t==================================================\n");
         printf("\nMasukan nilai Absen = %.0f\n", nab);
         goto angkaKedua;
     }
     }
     else {
-        printf("Input Salah!");
+        printf("\t\t\t\t\tInput Salah!");
         getch();
         system("cls");
-        printf ("\nKelompok 20\n");
+        system("color 90");
+        printf("\n\n\n\n\n\n\n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|            This Program Created By :           |\n");
+        printf("\t\t\t\t|                  Kelompok 20                   |\n");
+        printf("\t\t\t\t==================================================\n");
         printf("\nMasukan nilai Absen = %.0f\n", nab);
         goto angkaKedua;
     }
 
     angkaKetiga:
-    printf("Masukan nilai QUIZ  = ");
+    printf("\t\t\t\t\tMasukan nilai QUIZ  = ");
     if (validasiInput(&nq)) {
         if (nq<0 || nq >100) {
         system("cls");
-        printf ("\nKelompok 20\n");
+        system("color 90");
+        printf("\n\n\n\n\n\n\n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|            This Program Created By :           |\n");
+        printf("\t\t\t\t|                  Kelompok 20                   |\n");
+        printf("\t\t\t\t==================================================\n");
         printf("Masukan nilai Absen =  %.0f\n", nab);
         printf("\nMasukan nilai Tugas = %.0f\n", nt);
         goto angkaKetiga;
     }
     }
     else {
-        printf("Input Salah!");
+        printf("\t\t\t\t\tInput Salah!");
         getch();
         system("cls");
-        printf("Kelompok 20\n");
+        system("color 90");
+        printf("\n\n\n\n\n\n\n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|            This Program Created By :           |\n");
+        printf("\t\t\t\t|                  Kelompok 20                   |\n");
+        printf("\t\t\t\t==================================================\n");
         printf("Masukan nilai Absen =  %.0f\n", nab);
         printf("Masukan nilai Tugas = %.0f\n", nt);
         goto angkaKetiga;
     }
 
     angkaKeempat:
-    printf("Masukan nilai UTS   = ");
+    printf("\t\t\t\t\tMasukan nilai UTS   = ");
     if (validasiInput(&uts)) {
         if (uts<0 || uts>100){
         printf("Input Salah!");
         getch();system("cls");
-        printf ("\nKelompok 20\n");
+        system("color 90");
+        printf("\n\n\n\n\n\n\n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|            This Program Created By :           |\n");
+        printf("\t\t\t\t|                  Kelompok 20                   |\n");
+        printf("\t\t\t\t==================================================\n");
         printf("\nMasukan nilai Absen = %.0f\n", nab);
         printf("\nMasukan nilai Tugas = %.0f\n", nt);
         printf("\nMasukan nilai QUIZ= %.0f\n", nq);
@@ -96,21 +152,35 @@ int main(){
         }
         }
         else {
-        printf("Input Salah!");
+        printf("\t\t\t\t\tInput Salah!");
         getch();
         system("cls");
-        printf ("\nKelompok 20\n");
+        system("color 90");
+        printf("\n\n\n\n\n\n\n");
+        printf("\t\t\t\t==================================================\n");
+        ("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|            This Program Created By :           |\n");
+        printf("\t\t\t\t|                  Kelompok 20                   |\n");
+        printf("\t\t\t\t==================================================\n");
         printf("\nMasukan nilai Absen = %.0f\n", nab);
         printf("\nMasukan nilai Tugas = %.0f\n", nt);
         printf("\nMasukan nilai QUIZ= %.0f\n", nq);
         goto angkaKeempat;
     }
     angkaKelima:
-    printf("Masukan nilai UAS   = ");
+    printf("\t\t\t\t\tMasukan nilai UAS   = ");
     if (validasiInput(&uas)) {
         if (uas<0 || uas >100) {
         system("cls");
-        printf ("\nKelompok 20\n");
+        system("color 90");
+        printf("\n\n\n\n\n\n\n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|            This Program Created By :           |\n");
+        printf("\t\t\t\t|                  Kelompok 20                   |\n");
+        printf("\t\t\t\t==================================================\n");
         printf("\nMasukan nilai Absen = %.0f\n", nab);
         printf("\nMasukan nilai Tugas = %.0f\n", nt);
         printf("\nMasukan nilai QUIZ= %.0f\n", nq);
@@ -119,10 +189,17 @@ int main(){
         }
     }
     else {
-        printf("Input Salah!");
+        printf("\t\t\t\t\tInput Salah!");
         getch();
         system("cls");
-        printf ("Kelompok 20\n");
+        system("color 90");
+        printf("\n\n\n\n\n\n\n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t|            This Program Created By :           |\n");
+        printf("\t\t\t\t|                  Kelompok 20                   |\n");
+        printf("\t\t\t\t==================================================\n");
         printf("\nMasukan nilai Absen = %.0f\n", nab);
         printf("\nMasukan nilai Tugas = %.0f\n", nt);
         printf("\nMasukan nilai QUIZ= %.0f\n", nq);
@@ -132,40 +209,40 @@ int main(){
 
     na=(nab*0.5)+(nt*0.20)+(nq*0.15)+(uts*0.30)+(uas*0.30);
     if(na>=0 && na<45 ){
-        printf ("\nNilai Akhir = %.2f %c",na);
-        printf("\nIndeks Nilai Anda adalah E");
+        printf ("\n\t\t\t\t\tNilai Akhir = %.2f %c",na);
+        printf("\n\t\t\t\t\tIndeks Nilai Anda adalah E");
     }
     else if(na<=50 ){
-        printf ("\nNilai Akhir = %.2f %c",na);
-        printf("\nIndeks Nilai Anda adalah D");
+        printf ("\n\t\t\t\t\tNilai Akhir = %.2f %c",na);
+        printf("\n\t\t\t\t\tIndeks Nilai Anda adalah D");
     }
     else if(na<=55 ){
-        printf ("\nNilai Akhir = %.2f %c",na);
-        printf("\nIndeks Nilai Anda adalah D+");
+        printf ("\n\t\t\t\t\tNilai Akhir = %.2f %c",na);
+        printf("\n\t\t\t\t\tIndeks Nilai Anda adalah D+");
     }
     else if(na<=60 ){
-        printf ("\nNilai Akhir = %.2f %c",na);
-        printf("\nIndeks Nilai Anda adalah C");
+        printf ("\n\t\t\t\t\tNilai Akhir = %.2f %c",na);
+        printf("\n\t\t\t\t\tIndeks Nilai Anda adalah C");
     }
     else if(na<=65 ){
-       printf ("\nNilai Akhir = %.2f %c",na);
-        printf("\nIndeks Nilai Anda adalah C+");
+       printf ("\n\t\t\t\t\tNilai Akhir = %.2f %c",na);
+        printf("\n\t\t\t\t\tIndeks Nilai Anda adalah C+");
     }
     else if(na<=75 ){
-        printf ("\nNilai Akhir = %.2f %c",na);
-        printf("\nIndeks Nilai Anda adalah B");
+        printf ("\n\t\t\t\t\tNilai Akhir = %.2f %c",na);
+        printf("\n\t\t\t\t\tIndeks Nilai Anda adalah B");
     }
     else if(na<=80 ){
-        printf ("\nNilai Akhir = %.2f %c",na);
-        printf("\nIndeks Nilai Anda adalah B+");
+        printf ("\n\t\t\t\t\tNilai Akhir = %.2f %c",na);
+        printf("\n\t\t\t\t\tIndeks Nilai Anda adalah B+");
     }
     else if(na<=100 ){
-        printf ("\nNilai Akhir = %.2f %c",na);
-        printf("\nIndeks Nilai Anda adalah A");
+        printf ("\n\t\t\t\t\tNilai Akhir = %.2f %c",na);
+        printf("\n\t\t\t\t\tIndeks Nilai Anda adalah A");
     }
     keluar:
     fflush(stdin);
-    printf ("\n\nIngin kembali ke Menu Utama? (Y/N)");
+    printf ("\n\n\t\t\t\t\tIngin kembali ke Menu Utama? (Y/N)");
     scanf("%s",&pilih);
     if (strcmpi(pilih,"y")==0){
             system("cls");main();
