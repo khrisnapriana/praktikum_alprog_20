@@ -9,12 +9,19 @@ int main(){
 	int tgl,bln,maks;
 	char term;
 	char bulan[100];
-	printf("\t\tKELOMPOK 20\n");
-	printf("\n\t\tPilih Bulan :\n");
-	printf("\n\t|Januari   | Februari |  Maret   | April    |\n");
-	printf("\t\|  Mei     |   Juni   |  Juli    | Agustus  |\n");
-	printf("\t|September |  Oktober | November | Desember |\n");
-	printf("\n\tMasukan Bulan Lahir :");
+	    system("color 90");
+    printf("\n\n\n\n\n\n\n");
+	printf("\t\t\t\t==================================================\n");
+	printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+	printf("\t\t\t\t==================================================\n");
+	printf("\t\t\t\t|            This Program Created By :           |\n");
+	printf("\t\t\t\t|                  Kelompok 20                   |\n");
+	printf("\t\t\t\t==================================================\n");
+	printf("\n\t\t\t\t\tPilih Bulan :\n");
+	printf("\n\t\t\t\t|Januari   | Februari |  Maret   | April    |\n");
+	printf("\t\t\t\t|  Mei     |   Juni   |  Juli    | Agustus  |\n");
+	printf("\t\t\t\t|September |  Oktober | November | Desember |\n");
+	printf("\n\t\t\t\t\tMasukan Bulan Lahir :");
 	scanf("%s", &bulan);
 	if (strcmpi(bulan,"januari")==0){
 		bln=1; maks=31;}
@@ -47,65 +54,72 @@ int main(){
 		main();
 }
 	angka:
-	printf ("\n\tMasukan tanggal lahir:");
+	printf ("\n\t\t\t\t\t\Masukan tanggal lahir:");
 	fflush(stdin);
 	if(scanf("%d%c", &tgl, &term) != 2 || term != '\n' || tgl <= 0 || tgl >maks){
-		printf("Tanggal Salah!\n");
+		printf("\t\t\t\t\t\Tanggal Salah!\n");
 	getch();
 	system("cls");
-    printf("\t\tKELOMPOK 20\n");
-	printf("\n\t\tPilih Bulan :\n");
-	printf("\n\t|Januari   | Februari |  April   |\n");
-	printf("\t\|  Mei     |   Juni   | Agustus  |\n");
-	printf("\t|September |  Oktober | Desember |\n");
-	printf("\n\tMasukan Bulan Lahir :");
+    system("color 90");
+    printf("\n\n\n\n\n\n\n");
+	printf("\t\t\t\t==================================================\n");
+	printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+	printf("\t\t\t\t==================================================\n");
+	printf("\t\t\t\t|            This Program Created By :           |\n");
+	printf("\t\t\t\t|                  Kelompok 20                   |\n");
+	printf("\t\t\t\t==================================================\n");
+	printf("\n\t\t\t\t\tPilih Bulan :\n");
+	printf("\n\t\t\t\t|Januari   | Februari |  April   |\n");
+	printf("\t\t\t\t|  Mei     |   Juni   | Agustus  |\n");
+	printf("\t\t\t\t|September |  Oktober | Desember |\n");
+	printf("\n\t\t\t\t\tMasukan Bulan Lahir :");
 
 }
 	if (bln==1 && tgl <= 19 || bln==12 && tgl >= 22){
-		printf ("\n\tZodiak Anda Adalah Capricorn"); }
+		printf ("\n\t\t\t\t\tZodiak Anda Adalah Capricorn"); }
 	else if (bln==2 && tgl <=18  || bln==1 && tgl >= 20){
-		printf ("\n\tZodiak Anda Adalah Aquarius");
+		printf ("\n\t\t\t\t\tZodiak Anda Adalah Aquarius");
 	}
 	else if (bln==3 && tgl <= 20 || bln==2 && tgl >= 19){
-		printf ("\n\tZodiak Anda Adalah Pisces");
+		printf ("\n\t\t\t\t\t=Zodiak Anda Adalah Pisces");
 	}
 	else if (bln==4 && tgl <= 19 || bln==3 && tgl >= 21){
-		printf ("\n\tZodiak Anda Adalah Aries");
+		printf ("\n\t\t\t\t\t=Zodiak Anda Adalah Aries");
 	}
 	else if (bln==5 && tgl <= 20 || bln==4 && tgl >= 20){
-		printf ("\n\tZodiak Anda Adalah Taurus");
+		printf ("\n\t\t\t\t\tZodiak Anda Adalah Taurus");
 	}
 	else if (bln==6 && tgl <= 20 || bln==5 && tgl >= 21){
-		printf ("\n\tZodiak Anda Adalah Gemini");
+		printf ("\n\t\t\t\t\tZodiak Anda Adalah Gemini");
 	}
 	else if (bln==7 && tgl <= 22 || bln==6 && tgl >= 21){
-		printf ("\n\tZodiak Anda Adalah Cancer");
+		printf ("\n\t\t\t\t\tZodiak Anda Adalah Cancer");
 	}
 	else if (bln==8 && tgl <= 22 || bln==7 && tgl >= 23){
-		printf ("\n\tZodiak Anda Adalah Leo");
+		printf ("\n\t\t\t\t\tZodiak Anda Adalah Leo");
 	}
 	else if (bln==9 && tgl <= 22 || bln==8 && tgl >= 23){
-		printf ("\n\tZodiak Anda Adalah Virgo");
+		printf ("\n\t\t\t\t\tZodiak Anda Adalah Virgo");
 	}
 	else if (bln==10 && tgl <= 22 || bln==9 && tgl >= 23){
-		printf ("\nZodiak Anda Adalah Libra");
+		printf ("\n\t\t\t\t\tZodiak Anda Adalah Libra");
 	}
 	else if (bln==11 && tgl <= 21 || bln==10 && tgl >= 23){
-		printf ("\n\tZodiak Anda Adalah Scorpio");
+		printf ("\n\t\t\t\t\tZodiak Anda Adalah Scorpio");
 	}
 	else if (bln==12 && tgl <= 21 || bln==11 && tgl >= 22){
-		printf ("\n\tZodiak Anda Adalah Sagitarius");
+		printf ("\n\t\t\t\t\tZodiak Anda Adalah Sagitarius");
 	}
 	keluar:
 	fflush(stdin);
-	printf ("\n\n\tApakah ingin kembali ke menu utama? (Y/N)");
+	printf ("\n\n\t\t\t\t\tApakah ingin kembali ke menu utama? (Y/N)");
 	scanf("%s",&pilih);
 	if (strcmpi(pilih,"y")==0){
 	system("cls");
 	main();
 	}
 	else if (strcmpi(pilih,"n")==0){
-	printf("\n\n\tSemoga Hari Anda Menyenangkan dan Bahagia");
+	printf("\n\n\t\t\t\t\tSemoga Hari Anda Menyenangkan dan Bahagia");
 	getch();
 	}
 	else
