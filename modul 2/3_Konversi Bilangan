@@ -8,11 +8,19 @@ void biner();
 void keluar();
 int main(){
     char pil[10]; menu:
-    printf("KELOMPOK 20\n");
-    printf("1. Biner ke Desimal\n");
-    printf("2. Desimal ke Biner\n");
-    printf("3. Keluar\n");
-    printf("Pilihan:");
+    system("color 90");
+    printf("\n\n\n\n\n\n\n");
+	printf("\t\t\t\t==================================================\n");
+	printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
+	printf("\t\t\t\t==================================================\n");
+	printf("\t\t\t\t|            This Program Created By :           |\n");
+	printf("\t\t\t\t|                  Kelompok 20                   |\n");
+	printf("\t\t\t\t==================================================\n");
+    printf("\t\t\t\t1. Biner ke Desimal\n");
+    printf("\t\t\t\t2. Desimal ke Biner\n");
+    printf("\t\t\t\t3. Keluar\n");
+    printf("\t\t\t\t==================================================\n\n");
+    printf("\t\t\t\tPilihan:");
     scanf("%s",&pil);
     if (strcmp(pil,"1")==0)
         biner();
@@ -29,7 +37,6 @@ int main(){
         goto menu;
     }
 }
-
 void biner(){
     system("cls");
     char biner[100];
@@ -37,8 +44,11 @@ void biner(){
     int test=0;
     fflush(stdin);
     angka:
-    printf (" BINER --> DESIMAL\n");
-    printf ("masukan bilangan biner     :");
+    printf("\n\n\n\n\n\n\n");
+	printf("\t\t\t\t==================================================\n");
+	printf("\t\t\t\t|                  BINER --> DESIMAL             | \n");
+	printf("\t\t\t\t==================================================\n");
+    printf ("\n\t\t\t\t\tMasukan bilangan biner     :");
     scanf("%s",&biner);
     int b=strlen(biner);
     for(i=0;i<b;i++)
@@ -51,7 +61,7 @@ void biner(){
         }
     }
     if (test==0){
-        printf ("bilangan desimalnya adalah :");
+        printf ("\t\t\t\t\tBilangan desimalnya adalah :");
         for(i=0;i<b;i++)
         {
                 des=(des*2)+biner[i]-48;
@@ -74,15 +84,18 @@ void desimal(){
     int j;
     int biner[100];
     angka:
-    printf("DESIMAL --> BINER\n");
-    printf("Masukkan bilangan  : ");
+    printf("\n\n\n\n\n\n\n");
+	printf("\t\t\t\t==================================================\n");
+	printf("\t\t\t\t|                  BINER --> DESIMAL             | \n");
+	printf("\t\t\t\t==================================================\n");
+    printf ("\n\t\t\t\t\tMasukkan bilangan  : ");
     fflush(stdin);
         if(scanf("%d%c", &n, &term) != 2 || term != '\n' || n <=0){
             printf("Masukan Bilangan Bulat Positif!\n");
             getch();
             system("cls");
             goto angka;}
-        printf("Bilangan Biner     : ");
+        printf("\t\t\t\t\tBilangan Biner     : ");
         while(n>0){
             biner[i]=n%2;
                 n=n/2;
@@ -96,9 +109,10 @@ void desimal(){
 }
 
 void keluar(){
+    system("cls");
     char pilih[100];
     fflush(stdin);
-    printf ("\nKembali ke menu utama? (Y/N)");
+    printf ("\n\n\t\t\t\t\tIngin Kembali ke menu utama? (Y/N)");
     scanf("%s",&pilih);
     if (strcmpi(pilih,"y")==0){
             system("cls");
@@ -108,5 +122,6 @@ void keluar(){
         printf("Semoga Hari Anda Menyenangkan dan Bahagia!");
     }
     else
-        keluar();
+        keluar(0);
 }
+
