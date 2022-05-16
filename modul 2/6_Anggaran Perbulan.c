@@ -5,6 +5,7 @@ void judulprogram(){
 	printf("\n============================================\n");
 	printf("||	     PROGRAM MENGHITUNG		  ||\n");
 	printf("||	ANGSURAN YANG HARUS DIBAYAR	  ||\n"); 
+	printf("||              KELOMPOK 20               ||\n");
 	printf("============================================\n\n");
 }
 
@@ -33,8 +34,25 @@ void hitungangsuran(int pinjampokok, int besaranbunga, int waktupinjam){
 	printf("\n=======================================================");
 }
 
+int validasi(){
+	int angka;
+	char karakter;
+	
+	if(scanf("%d%c",&angka,&karakter)!= 2 || karakter != '\n'){
+		//Untuk menghilangkan nilai buffer pada system
+		//Sehingga saat melakukan input kembali, nilai sebelumnya tidak mempengaruhi input selanjutnya
+		fflush(stdin);	
+		printf("\nHanya menerima input berupa angka saja!\n");
+		printf("Masukkan input yang benar: ");
+		return validasi();
+	}
+	else{
+		return angka;
+	}
+}
+
 int main(){
-	char menu_salah = 'y';
+	char menu_salah = 'y' || 'Y';
 	int menu;
 	int pokokpinjaman;
 	int besarbunga;
@@ -49,18 +67,18 @@ int main(){
 		printf("||2. Keluar             ||\n");
 		printf("==========================\n\n");
 		printf("Masukkan pilihan menu: ");	
-		scanf("%d", &menu);
+		menu = validasi();
 		//clear layar setelah user menginputkan menu
 		system("cls");
 		judulprogram();
 		
 		if(menu==1){
 			printf("Masukkan pokok pinjaman: ");
-			scanf("%d", &pokokpinjaman);
-			printf("\nMasukkan besar bunga (%%): ");
-			scanf("%d", &besarbunga);
-			printf("\nMasukkan lama pinjaman (bulan): ");
-			scanf("%d", &lamapinjam);
+			pokokpinjaman = validasi();
+			printf("\nMasukkan besar bunga(%%): ");
+			besarbunga = validasi();
+			printf("\nMasukkan lama pinjaman(bulan): ");
+			lamapinjam = validasi();
 			system("cls");
 			judulprogram();
 			//memanggil fungsi hitungangsuran
@@ -68,16 +86,18 @@ int main(){
 		}
 		else if(menu == 2){
 			//fungsi untuk keluar dari program
+			system("cls");
 			exit(0);
 		}
 		else{
-			printf("Input yang anda masukkan tidak ada dalam menu! Silahkan coba lagi");
+			printf("Input yang anda masukkan tidak ada dalam menu! Silahkan coba lagi\n");
 		}
-		printf("\n\nKembali ke menu? (y/t): ");
+		printf("\n*Tekan selain keyword Y/y untuk keluar*");
+		printf("\nKembali ke menu? (Y/y): ");
 		scanf(" %c", &menu_salah);
 		system("cls");
 	}
-	while(menu_salah == 'y');
+	while(menu_salah == 'y' || menu_salah == 'Y');
 	
 	return 0;
 }
