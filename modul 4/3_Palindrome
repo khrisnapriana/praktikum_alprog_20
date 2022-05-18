@@ -1,0 +1,168 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+char word[1000];
+int palindrom(char word[], int size);
+void hasil(char word[]);
+void print_jumlahkata(char *word);
+void perulangan();
+int validasi(char *var);
+void penutup();
+
+void judul(){
+	printf("\t\t==============================================\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t|             SELAMAT DATANG                 |\n");
+	printf("\t\t|     PROGRAM MENGHITUNG KATA PALINDROM      |\n");
+	printf("\t\t|               KELOMPOK 20                  |\n");
+	printf("\t\t|              MODUL IV NO 3                 |\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t==============================================\n");
+}
+
+void penutup(){
+	system("cls");
+	printf("\t\t==============================================\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t|             KAMI DARI KELOMPOK 20          |\n");
+	printf("\t\t|                 TERIMA KASIH               |\n");
+	printf("\t\t=============================================|\n");
+	printf("\t\t==============================================\n");
+}
+
+void print_jumlahkata(char *word){
+	int panjang = strlen(word);
+	char x[panjang];
+	int hitung = 0;
+	int i, j;
+	FILE*file;
+	file=fopen("kamuskata.txt", "a");
+	printf("\t\t Jumlah kata(%d)\n", panjang);
+	fprintf(file, "%s (%d) :", word, panjang);
+	for(i=0; i<panjang; i++){
+		bool sudah_dihitung = false;
+		for(j=0; j<hitung; j++)
+		if(tolower (word[i]) == tolower(x[j])){
+			sudah_dihitung = true;
+		}if(sudah_dihitung){
+			continue;
+		}
+		
+		int count=0;
+		for(j=0; j<panjang; j++){
+			if(tolower(word[i]) == tolower(word[j])){
+				count++;
+			}
+		}
+		printf("\t\t %c = %d\n", word[i], count);
+		fprintf(file, " %c = %d ", word[i], count);
+		x[hitung] = word[i];
+		hitung++;
+	}
+	
+	hasil(word);
+}
+
+int palindrom(char word[], int size){
+	int i;
+	int status = 1;
+	
+	for(i=0; i<size; i++){
+		if(tolower(word[i]) == tolower(word[size-1-i])){
+			continue;
+		}else{
+			status = 0;
+			break;
+		}
+	}
+	
+	return status;
+}
+
+void hasil(char word[]){
+	FILE*file;
+	file=fopen("kamuskata.txt", "a");
+	
+	if(palindrom(word, strlen(word)) == 1){
+		printf("\t\t Palindrom\n");
+		fprintf(file, " : Palindrom\n");
+	}else{
+		printf("\t\t Bukan Palindrom\n");
+		fprintf(file, ": Bukan Palindrom\n");
+	}
+	
+	perulangan();
+}
+
+
+int clean(){
+	while(getchar() != '\n');
+	return 1;
+}
+
+void perulangan(){
+	char pilihan, cek;
+	
+	printf("\n\t\t Apakah Anda ingin mengulang program?\n");
+	printf("\t\t Ketik y untuk mengulang dan t untuk menutup program\n");
+	
+	do{
+		printf("\t\t (y,t) : ");
+		if(((scanf("%c%c", &pilihan, &cek)) != 2 || cek != '\n') && clean()){
+			printf("\t\t Pilihan yang Anda masukkan salah!\n");
+			printf("\t\t Ketik y untuk mengulang dan t untuk menutup program!\n");
+		}else{
+			if(pilihan == 'Y' || pilihan == 'y'){
+				system ("cls");
+				main();
+				break;
+			}else if(pilihan == 'T' || pilihan == 't'){
+				penutup();
+				exit(0);
+				break;
+			}else{
+				printf("\t\t Pilihan yang Anda masukkan salah!\n");
+				printf("\t\t Ketik y untuk mengulang dan t untuk menutup program\n");
+				
+			}
+		}
+	}while(1);
+}
+
+int validasi(char *var){
+	int length, i, digit = 0, alfabet = 0;
+	gets(word);
+	length = strlen(word);
+	
+	for(i=0; i<length; i++){
+		if(isdigit(word[i]) != 0)
+		digit++;
+	}
+	
+	if(digit>0){
+		printf("\n\t\t Harap masukkan kata dengan benar!\n");
+		printf("\t\t Tidak boleh terdapat angka pada kata yang dimasukkan\n\n");
+		printf("\t\t Masukkan kata yang ingin dihitung!\n\t\t ");
+		validasi(var);
+	}
+	fflush(stdin);
+	
+	if(length <= 1){
+		printf("\n\t\t Anda belum memasukkan kata untuk diperiksa!\n");
+		printf("\t\t Harap masukkan kata yang ingin diperiksa!\n\n");
+		printf("\t\t Masukkan kata yang ingin dihitung!\n\t\t ");
+		validasi(var);
+	}
+	fflush(stdin);
+	print_jumlahkata(word);
+}
+
+int main(){
+	judul();
+	printf("\t\t Silahkan masukkan kata yang ingin Anda hitung!\n\t\t ");
+	validasi(word);
+	
+	return 0;
+}
