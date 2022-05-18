@@ -16,9 +16,9 @@ int main(){
 	printf("\t\t\t\t|            This Program Created By :           |\n");
 	printf("\t\t\t\t|                  Kelompok 20                   |\n");
 	printf("\t\t\t\t==================================================\n");
-    printf("\t\t\t\t1. Biner ke Desimal\n");
-    printf("\t\t\t\t2. Desimal ke Biner\n");
-    printf("\t\t\t\t3. Keluar\n");
+    printf("\t\t\t\t\t\t1. Biner ke Desimal\n");
+    printf("\t\t\t\t\t\t2. Desimal ke Biner\n");
+    printf("\t\t\t\t\t\t3. Keluar\n");
     printf("\t\t\t\t==================================================\n\n");
     printf("\t\t\t\tPilihan:");
     scanf("%s",&pil);
@@ -122,6 +122,5 @@ void keluar(){
         printf("Semoga Hari Anda Menyenangkan dan Bahagia!");
     }
     else
-        keluar(0);
+        exit;
 }
-
