@@ -4,9 +4,7 @@
 #include <string.h>
 
 float validasiInput(float *var);
-float validasiInput(float *var)
-{
-
+float validasiInput(float *var){
     char buff[1024];
     char cek;
     if (fgets(buff, sizeof(buff), stdin) !=NULL) {
@@ -23,12 +21,12 @@ int main(){
     char pilih[100];
     system("color 90");
     printf("\n\n\n\n\n\n\n");
-	printf("\t\t\t\t==================================================\n");
-	printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
-	printf("\t\t\t\t==================================================\n");
-	printf("\t\t\t\t|            This Program Created By :           |\n");
-	printf("\t\t\t\t|                  Kelompok 20                   |\n");
-	printf("\t\t\t\t==================================================\n");
+	printf("\t\t\t\t=========================================================\n");
+	printf("\t\t\t\t|Program Menentukan Nilai Akhir Mata Kuliah Berupa Huruf| \n");
+	printf("\t\t\t\t=========================================================\n");
+	printf("\t\t\t\t|                This Program Created By :              |\n");
+	printf("\t\t\t\t|                      Kelompok 20                      |\n");
+	printf("\t\t\t\t=========================================================\n");
     angkaPertama:
     printf("\n\t\t\t\t\tMasukan nilai Absen = ");
     fflush(stdin);
@@ -38,12 +36,12 @@ int main(){
         getch();system("cls");
         system("color 90");
         printf("\n\n\n\n\n\n\n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|            This Program Created By :           |\n");
-        printf("\t\t\t\t|                  Kelompok 20                   |\n");
-        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|Program Menentukan Nilai Akhir Mata Kuliah Berupa Huruf| \n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|                This Program Created By :              |\n");
+        printf("\t\t\t\t|                      Kelompok 20                      |\n");
+        printf("\t\t\t\t=========================================================\n");
         goto angkaPertama;
     }
     }
@@ -53,12 +51,12 @@ int main(){
         system("cls");
         system("color 90");
         printf("\n\n\n\n\n\n\n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|            This Program Created By :           |\n");
-        printf("\t\t\t\t|                  Kelompok 20                   |\n");
-        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|Program Menentukan Nilai Akhir Mata Kuliah Berupa Huruf| \n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|                This Program Created By :              |\n");
+        printf("\t\t\t\t|                      Kelompok 20                      |\n");
+        printf("\t\t\t\t=========================================================\n");
         goto angkaPertama;
     }
 
@@ -70,12 +68,12 @@ int main(){
         getch();system("cls");
         system("color 90");
         printf("\n\n\n\n\n\n\n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|            This Program Created By :           |\n");
-        printf("\t\t\t\t|                  Kelompok 20                   |\n");
-        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|Program Menentukan Nilai Akhir Mata Kuliah Berupa Huruf| \n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|                This Program Created By :              |\n");
+        printf("\t\t\t\t|                      Kelompok 20                      |\n");
+        printf("\t\t\t\t=========================================================\n");
         printf("\nMasukan nilai Absen = %.0f\n", nab);
         goto angkaKedua;
     }
@@ -86,12 +84,12 @@ int main(){
         system("cls");
         system("color 90");
         printf("\n\n\n\n\n\n\n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|            This Program Created By :           |\n");
-        printf("\t\t\t\t|                  Kelompok 20                   |\n");
-        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|Program Menentukan Nilai Akhir Mata Kuliah Berupa Huruf| \n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|                This Program Created By :              |\n");
+        printf("\t\t\t\t|                      Kelompok 20                      |\n");
+        printf("\t\t\t\t=========================================================\n");
         printf("\nMasukan nilai Absen = %.0f\n", nab);
         goto angkaKedua;
     }
@@ -103,12 +101,12 @@ int main(){
         system("cls");
         system("color 90");
         printf("\n\n\n\n\n\n\n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|            This Program Created By :           |\n");
-        printf("\t\t\t\t|                  Kelompok 20                   |\n");
-        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|Program Menentukan Nilai Akhir Mata Kuliah Berupa Huruf| \n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|                This Program Created By :              |\n");
+        printf("\t\t\t\t|                      Kelompok 20                      |\n");
+        printf("\t\t\t\t=========================================================\n");
         printf("Masukan nilai Absen =  %.0f\n", nab);
         printf("\nMasukan nilai Tugas = %.0f\n", nt);
         goto angkaKetiga;
@@ -120,12 +118,12 @@ int main(){
         system("cls");
         system("color 90");
         printf("\n\n\n\n\n\n\n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|            This Program Created By :           |\n");
-        printf("\t\t\t\t|                  Kelompok 20                   |\n");
-        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|Program Menentukan Nilai Akhir Mata Kuliah Berupa Huruf| \n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|                This Program Created By :              |\n");
+        printf("\t\t\t\t|                      Kelompok 20                      |\n");
+        printf("\t\t\t\t=========================================================\n");
         printf("Masukan nilai Absen =  %.0f\n", nab);
         printf("Masukan nilai Tugas = %.0f\n", nt);
         goto angkaKetiga;
@@ -139,12 +137,12 @@ int main(){
         getch();system("cls");
         system("color 90");
         printf("\n\n\n\n\n\n\n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|            This Program Created By :           |\n");
-        printf("\t\t\t\t|                  Kelompok 20                   |\n");
-        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|Program Menentukan Nilai Akhir Mata Kuliah Berupa Huruf| \n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|                This Program Created By :              |\n");
+        printf("\t\t\t\t|                      Kelompok 20                      |\n");
+        printf("\t\t\t\t=========================================================\n");
         printf("\nMasukan nilai Absen = %.0f\n", nab);
         printf("\nMasukan nilai Tugas = %.0f\n", nt);
         printf("\nMasukan nilai QUIZ= %.0f\n", nq);
@@ -157,12 +155,12 @@ int main(){
         system("cls");
         system("color 90");
         printf("\n\n\n\n\n\n\n");
-        printf("\t\t\t\t==================================================\n");
-        ("\t\t\t\t|           Program Konferensi Bilangan          | \n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|            This Program Created By :           |\n");
-        printf("\t\t\t\t|                  Kelompok 20                   |\n");
-        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|Program Menentukan Nilai Akhir Mata Kuliah Berupa Huruf| \n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|                This Program Created By :              |\n");
+        printf("\t\t\t\t|                      Kelompok 20                      |\n");
+        printf("\t\t\t\t=========================================================\n");
         printf("\nMasukan nilai Absen = %.0f\n", nab);
         printf("\nMasukan nilai Tugas = %.0f\n", nt);
         printf("\nMasukan nilai QUIZ= %.0f\n", nq);
@@ -175,12 +173,12 @@ int main(){
         system("cls");
         system("color 90");
         printf("\n\n\n\n\n\n\n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|            This Program Created By :           |\n");
-        printf("\t\t\t\t|                  Kelompok 20                   |\n");
-        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|Program Menentukan Nilai Akhir Mata Kuliah Berupa Huruf| \n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|                This Program Created By :              |\n");
+        printf("\t\t\t\t|                      Kelompok 20                      |\n");
+        printf("\t\t\t\t=========================================================\n");
         printf("\nMasukan nilai Absen = %.0f\n", nab);
         printf("\nMasukan nilai Tugas = %.0f\n", nt);
         printf("\nMasukan nilai QUIZ= %.0f\n", nq);
@@ -194,12 +192,12 @@ int main(){
         system("cls");
         system("color 90");
         printf("\n\n\n\n\n\n\n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|           Program Konferensi Bilangan          | \n");
-        printf("\t\t\t\t==================================================\n");
-        printf("\t\t\t\t|            This Program Created By :           |\n");
-        printf("\t\t\t\t|                  Kelompok 20                   |\n");
-        printf("\t\t\t\t==================================================\n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|Program Menentukan Nilai Akhir Mata Kuliah Berupa Huruf| \n");
+        printf("\t\t\t\t=========================================================\n");
+        printf("\t\t\t\t|                This Program Created By :              |\n");
+        printf("\t\t\t\t|                      Kelompok 20                      |\n");
+        printf("\t\t\t\t=========================================================\n");
         printf("\nMasukan nilai Absen = %.0f\n", nab);
         printf("\nMasukan nilai Tugas = %.0f\n", nt);
         printf("\nMasukan nilai QUIZ= %.0f\n", nq);
@@ -250,5 +248,5 @@ int main(){
     else if (strcmpi(pilih,"n")==0){
             printf("Semoga Hari Anda Menyenangkan dan Bahagia!");
     } else
-           exit(0);
+           exit;
 }
