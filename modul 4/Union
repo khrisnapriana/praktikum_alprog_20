@@ -1,0 +1,174 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct kubus{
+	int sisi_kubus;
+	int luas_permukaan;
+	int volume;
+};
+
+union kubus1{
+	int sisi_kubus;
+	int luas_permukaan;
+	int volume;
+};
+
+void error(){
+	printf("\n\t\t Input Salah! Silahkan Input Ulang!\n");
+}
+
+void penutup(){
+	system("cls");
+	printf("\t\t=============================================\n");
+	printf("\t\t=============================================\n");
+	printf("\t\t|          KAMI DARI KELOMPOK 20            |\n");
+	printf("\t\t|              TERIMA KASIH                 |\n");
+	printf("\t\t=============================================\n");
+	printf("\t\t=============================================\n");
+};
+
+int verInput(int *var){
+   char buff[1024];
+   char check;
+
+   if (fgets(buff, sizeof(buff), stdin) !=NULL){ //bakal nerima input dari user
+    	if (sscanf(buff, "%d %c", var, &check) ==1){
+			return 1;
+		}
+   }
+     return 0;
+}
+
+void hitung_kubus(){
+	system("cls");
+	struct kubus a;
+	union kubus1 b;
+	int sisi;
+	int ver;
+	
+	printf("\t\t=============================================\n");
+	printf("\t\t=============================================\n");
+	printf("\t\t|            PERHITUNGAN KUBUS              |\n");
+	printf("\t\t=============================================\n");
+	printf("\t\t=============================================\n");
+	
+	while(1){
+		printf("\t\t Masukkan sisi :");
+		if(verInput(&sisi) && sisi >= 1){
+			break;
+		}else{
+			error();
+		}
+	}
+		
+	printf("\t\t==============================================\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t|               STRUCT KUBUS                 |\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t==============================================\n");
+	
+	a.sisi_kubus = sisi;
+	printf("\t\t| Sisi Kubus : %d\n", a.sisi_kubus);
+	a.luas_permukaan = 6*a.sisi_kubus*a.sisi_kubus;
+	printf("\t\t| Luas Permukaan : %d\n", a.luas_permukaan);
+	a.volume = a.sisi_kubus*a.sisi_kubus*a.sisi_kubus;
+	printf("\t\t| Volume : %d\n", a.volume);
+	
+	printf("\t\t==============================================\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t|                UNION KUBUS                 |\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t==============================================\n");
+	
+	b.sisi_kubus = sisi;
+	printf("\t\t| Sisi Kubus : %d\n", b.sisi_kubus);
+	b.luas_permukaan = 6*b.sisi_kubus*b.sisi_kubus;	
+	printf("\t\t| Luas Permukaan : %d\n", b.luas_permukaan);
+	b.sisi_kubus = sisi;
+	b.volume = b.sisi_kubus*b.sisi_kubus*b.sisi_kubus;
+	printf("\t\t| Volume : %d\n", b.volume);
+	
+	printf("\t\t==============================================\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t|               UKURAN MEMORI                |\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t==============================================\n");
+	
+	printf("\t\t| Ukuran Memori dari Struct Kubus: %d byte\n", sizeof (a));
+	printf("\t\t| Ukuran Memori dari Union Kubus : %d byte\n\n", sizeof (b));
+}
+
+void judull(){
+	system("cls");
+	int pilihan;
+	
+	printf("\t\t==============================================\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t| SELAMAT DATANG DI PROGRAM MENGHITUNG KUBUS |\n");
+	printf("\t\t|                KELOMPOK 20                 |\n");
+	printf("\t\t|               MODUL IV NO 2                |\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t|         1. Menghitung Kubus                |\n");
+	printf("\t\t|         2. Keluar                          |\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t==============================================\n");
+	
+	while(1){
+		printf("\n\t\t Masukkan pilihan :");
+		if(verInput(&pilihan)){
+			if(pilihan == 1){
+				hitung_kubus();
+				break;
+			}else if(pilihan == 2){
+				penutup();
+				exit(0);
+				break;
+			}else{
+				error();
+			}
+		}else{
+			error();
+		}
+	}
+}
+	
+
+void menu(){
+	int ulang;
+
+	printf("\t\t==============================================\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t|               1. Ulang                     |\n");
+	printf("\t\t|               2. Menu Utama                |\n");
+	printf("\t\t|               3. Keluar                    |\n");
+	printf("\t\t==============================================\n");
+	printf("\t\t==============================================\n");
+	
+	do{
+		printf("\t\t|        Masukkan Pilihan Anda : ");
+		if(verInput(&ulang)){
+			if(ulang == 1){
+				hitung_kubus ();
+				break;
+			}else if(ulang == 2){
+				main();
+				break;
+			}else if(ulang == 3){
+				penutup();
+				exit(0);
+				break;
+			}			
+		}else{
+			printf("\t\t| Pilihan hanya boleh berupa angka!\n");
+			error();
+		}
+	}while(1);
+}
+
+int main(){
+	judull();
+	menu();
+	
+	return 0;
+}
