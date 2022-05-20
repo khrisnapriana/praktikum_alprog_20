@@ -1,0 +1,162 @@
+#include<stdio.h>
+#include<conio.h>
+
+void urutkan();
+void tampilkan();
+void header();
+void menu();
+void headerview();
+
+int validasi(int *var);
+struct Mahasiswa {
+    char nama[100];
+    int nilai;
+}
+mahasiswa[100],temp;
+    int n=0,i,j=0;
+    char pil[100];
+    int main(){
+    header(); }
+    int validasi(int *var){
+        char buff[1024];
+        char cek;
+        if (fgets(buff, sizeof(buff), stdin) !=NULL) {
+                if (sscanf(buff, "%d %c", var, &cek) ==1){
+        return 1;
+        }
+    }
+        return 0;
+}
+
+    void menu(){
+    FILE *in;
+    fflush(stdin);
+    printf("\t\t\t\tMasukan Jumlah Data : ");
+    if (validasi(&n)){
+    } else{
+        printf("\t\t\t\tInvalid Input!");
+        getch();
+        system("cls");
+        main();
+    }
+    in=fopen("asistenin.txt","w");
+    int n1=0,n2,n3;
+    input:
+        for(i=n1;i<n;i++){
+            fflush(stdin);
+            printf("\t\t\t\tMasukan Nama  Mahasiswa ke-%d: ",i+1);
+            scanf("%s",&mahasiswa[i].nama);
+            fflush(stdin);
+            printf("\t\t\t\tMasukan Nilai Mahasiswa ke-%d: ",i+1);
+            if (validasi(&mahasiswa[i].nilai)){
+                if (mahasiswa[i].nilai>100 || mahasiswa[i].nilai<0) {
+                    printf("\t\t\t\tInvalid input!");
+                    getch();
+                    system("cls");
+                    headerview();
+                    printf("\t\t\t\tMasukan Jumlah Data : %d\n",n);
+                    for(n2=0;n2<i;n2++){
+                        printf("Masukan  Nama    Mahasiswa ke-%d: %s\n",n2+1,mahasiswa[n2].nama);
+                        printf("Masukan  Nilai  Mahasiswa ke-%d: %d\n\n",n2+1,mahasiswa[n2].nilai);
+}
+                        n1=i;
+                        goto input;
+}
+    }
+    else{
+        printf("\t\t\t\tInvalid input!");
+        getch();
+        system("cls");
+        headerview();
+        printf("\t\t\t\tMasukan Jumlah Data : %d\n",n);
+        for(n2=0;n2<i;n2++){
+            printf("Masukan  Nama    Mahasiswa ke-%d: %s\n",n2+1,mahasiswa[n2].nama);
+            printf("Masukan  Nilai  Mahasiswa ke-%d: %d\n",n2+1,mahasiswa[n2].nilai);
+    }
+    n1=i;
+    goto input; }
+    fprintf(in,"%s\n",mahasiswa[i].nama);
+    fprintf(in,"%d\n",mahasiswa[i].nilai);
+    }
+    fclose(in); read();
+    }
+
+void read(){
+    FILE *in1; j=0;
+    in1=fopen("asistenin.txt","r"); while(!feof(in1)){
+    fscanf(in1,"%s %d",&mahasiswa[j].nama,&mahasiswa[j].nilai);j++; }
+    fclose(in1); urutkan();
+}
+
+void urutkan(){
+    int i,k; FILE *out;
+    out=fopen("asistenout.txt","w");
+    for (i = 1 ; i <= n - 1; i++){
+    k = i;
+    while ( k > 0 && mahasiswa[k].nilai < mahasiswa[k- 1].nilai) {
+    temp= mahasiswa[k];
+    mahasiswa[k] = mahasiswa[k-1];
+    mahasiswa[k-1] =
+    temp; k--;
+    }
+}
+    fprintf(out,"\t\t\t+------------------------------------------+\n");
+    fprintf(out,"\t\t\tNilai Mata Kuliah Algoritma dan Pemrograman\n");
+    fprintf(out,"\t\t\t+------------------------------------------+\n\n");
+    k=1;
+    for(i=n-1;i>=0;i--){
+    fprintf(out,"%d.\t%s=%d\n",k,mahasiswa[i].nama,mahasiswa[i].nilai);
+    k++;
+    }
+    fclose(out);
+    tampilkan();
+}
+
+void tampilkan(){
+    system("cls");
+    FILE *out;
+    char karakter;
+        printf("\t\t\t\tTekan Tombol Apapun untuk melanjutkan...");
+        getch();
+        system("cls");
+    if((out=fopen("asistenout.txt","r"))==NULL){
+            printf("FILE NOT FOUND!!!");
+    } else{
+    while (!feof(out)){ karakter = getc(out);
+    putchar(karakter); }
+    }
+    printf("\n\t\t\t\tKembali ke menu utama?(y/n):");
+    scanf("%s",&pil);
+    if (strcmpi(pil,"y")==0){
+            system("cls");
+    main();
+    }
+    else if(strcmpi(pil,"n")==0){
+    printf("\t\t\t\tSemoga Hari Anda Menyenangkan!");
+    return 0;
+    }
+    fclose(out);
+}
+
+void header(){
+        system("color 90");
+        printf("\n\n\n\n\n\n\n");
+        printf("\t\t\t\t--------------------------------------------------------\n");
+        printf("\t\t\t\t|                    P R O G R A M                     |\n");
+        printf("\t\t\t\t|============| PENGURUTAN NILAI MAHASISWA | ===========|\n");
+        printf("\t\t\t\t|               This Program Created By :              |\n");
+        printf("\t\t\t\t|============|         KELOMPOK 20        | ===========|\n");
+        printf("\t\t\t\t--------------------------------------------------------\n");
+        menu();
+}
+
+void headerview(){
+        system("color 90");
+        printf("\n\n\n\n\n\n\n");
+        printf("\t\t\t\t--------------------------------------------------------\n");
+        printf("\t\t\t\t|                    P R O G R A M                     |\n");
+        printf("\t\t\t\t|============| PENGURUTAN NILAI MAHASISWA | ===========|\n");
+        printf("\t\t\t\t|               This Program Created By :              |\n");
+        printf("\t\t\t\t|============|         KELOMPOK 20        | ===========|\n");
+        printf("\t\t\t\t--------------------------------------------------------\n");
+}
