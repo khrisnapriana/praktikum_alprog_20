@@ -1,1 +1,1 @@
-# praktikum_alprog_20
+# Praktikum Algoritma Pemrograman
